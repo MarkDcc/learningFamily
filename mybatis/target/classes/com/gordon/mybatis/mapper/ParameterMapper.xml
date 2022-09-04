@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gordon.mybatis.mapper.ParameterMapper">
+    <select id="getAllUser" resultType="User">
+        select * from t_user;
+    </select>
+
+
+    <!--
+        有两种获取单个字面量参数的方法
+        1.#{}类似于jdbc的参数赋值，会自动添加‘’
+        2.${}类似于字符串拼接，需要注意sql注入，和单引号
+    -->
+    <select id="getUserByUsername" resultType="User">
+        select * from t_user where username = #{username}
+    </select>
+
+    <!--
+        获取多个参数的方法,也可以自定义Map,如果传入的是一个对象(User)。就按照获取对象属性的方式取值就可以了#{username}
+        mybatis会将我们的参数放在Map中，以arg0,arg1为键，值就是我们的参数。或者是param1,param2 为键
+
+        或者使用@Param("key")注解指定key
+    -->
+    <select id="checkLogin" resultType="User">
+        select * from t_user where username= #{arg0} and password=#{param2}
+    </select>
+
+</mapper>

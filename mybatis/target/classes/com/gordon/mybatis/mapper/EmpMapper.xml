@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gordon.mybatis.mapper.EmpMapper">
+    <resultMap id="empResultMap" type="Emp">
+        <id property="id" column="eid"></id>
+        <result property="empName" column="emp_name"></result>
+        <result property="sex" column="sex"></result>
+        <result property="age" column="age"></result>
+        <result property="email" column="email"></result>
+    </resultMap>
+
+    <resultMap id="empAndDeptResultMap" type="Emp">
+        <id property="id" column="eid"></id>
+        <result property="empName" column="emp_name"></result>
+        <result property="sex" column="sex"></result>
+        <result property="age" column="age"></result>
+        <result property="email" column="email"></result>
+        <association property="dept" javaType="Dept">
+            <id property="did" column="did"></id>
+            <result property="deptName" column="dept_name"></result>
+        </association>
+    </resultMap>
+
+    <resultMap id="empAndDeptByStepResultMap" type="Emp">
+        <id property="id" column="eid"></id>
+        <result property="empName" column="emp_name"></result>
+        <result property="sex" column="sex"></result>
+        <result property="age" column="age"></result>
+        <result property="email" column="email"></result>
+        <!--
+        1.select 设置分步查询的语句
+        2.column 设置分步查询的条件
+        -->
+        <association property="dept"
+                     select="com.gordon.mybatis.mapper.DeptMapper.getDeptById"
+                     column="did"></association>
+    </resultMap>
+
+    <select id="getEmpById" resultMap="empResultMap">
+        select * from t_emp where eid = #{id}
+    </select>
+
+
+    <!--
+        1.通过association 处理多对一
+        2.通过分步查询
+    -->
+    <select id="getEmpAndDeptById" resultMap="empAndDeptResultMap">
+        select * from t_emp left join t_dept on t_emp.did = t_dept.did where t_emp.eid = #{id}
+    </select>
+
+    <select id="getEmpAndDeptByStepById" resultMap="empAndDeptByStepResultMap">
+         select * from t_emp where eid = #{id}
+    </select>
+</mapper>

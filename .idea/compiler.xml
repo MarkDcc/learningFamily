@@ -8,11 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springboot" />
+        <module name="mybatis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="mybatis" target="8" />
       <module name="springboot" target="11" />
-      <module name="springbootLearning" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
