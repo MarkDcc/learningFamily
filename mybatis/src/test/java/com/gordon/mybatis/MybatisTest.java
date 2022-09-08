@@ -2,6 +2,7 @@ package com.gordon.mybatis;
 
 import com.gordon.mybatis.mapper.UserMapper;
 import com.gordon.mybatis.pojo.User;
+import com.gordon.mybatis.utils.SqlSessionUtils;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -10,6 +11,7 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 /**
  * @author dongchen
@@ -60,5 +62,27 @@ public class MybatisTest {
         //mapper.deleteUser();
         User userById = mapper.getUserById();
         System.out.println(userById);
+    }
+
+    @Test
+    public void testGetAllUser(){
+        InputStream resourceAsStream = null;
+        try {
+            resourceAsStream = Resources.getResourceAsStream("mybatis-config.xml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
+        SqlSessionFactory sqlSessionFactory = sqlSessionFactoryBuilder.build(resourceAsStream);
+        SqlSession sqlSession = sqlSessionFactory.openSession(true);
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        List<User> allUsers = mapper.getAllUsers(6);
+        sqlSession.close();
+        SqlSession sqlSession2 = sqlSessionFactory.openSession(true);
+        UserMapper mapper1 = sqlSession2.getMapper(UserMapper.class);
+        mapper1.getAllUsers(6);
+        // allUsers.stream().forEach(item-> System.out.println(item));
+        sqlSession2.close();
+
     }
 }

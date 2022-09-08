@@ -7,11 +7,11 @@
     <!--使用if-->
     <select id="getUser" resultType="User">
         select * from t_user where 1=1
-        <if test="username != null and username != ''">
-            and username = #{username}
+        <if test="user.username != null and user.username != ''">
+            and username = #{user.username}
         </if>
-        <if test="age != ''">
-            and age=#{age}
+        <if test="user.age != ''">
+            and age=#{user.age}
         </if>
     </select>
 

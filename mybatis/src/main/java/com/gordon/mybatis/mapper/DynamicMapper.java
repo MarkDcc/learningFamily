@@ -16,7 +16,7 @@ import java.util.List;
  */
 public interface DynamicMapper {
 
-   User getUser(User user);
+   User getUser(@Param("user") User user);
 
    int deleteByBatch(@Param("ids") Integer[] ids);
 

@@ -1,6 +1,9 @@
 package com.gordon.mybatis.mapper;
 
 import com.gordon.mybatis.pojo.User;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * @author dongchen
@@ -20,4 +23,7 @@ public interface UserMapper {
     int deleteUser();
 
     User getUserById();
+
+    List<User> getAllUsers(@Param("id") Integer id);
+
 }
