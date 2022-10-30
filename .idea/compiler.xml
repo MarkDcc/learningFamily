@@ -7,12 +7,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springboot" />
+        <module name="multithread" />
         <module name="mybatis" />
+        <module name="flowable-learn" />
+        <module name="javareview" />
+        <module name="springboot" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="mybatis" target="8" />
+      <module name="flowable-learn" target="11" />
+      <module name="javareview" target="11" />
+      <module name="multithread" target="11" />
+      <module name="mybatis" target="11" />
       <module name="springboot" target="11" />
     </bytecodeTargetLevel>
   </component>

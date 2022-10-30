@@ -17,9 +17,6 @@ public class AopMain {
         HelloService proxy = (HelloService) ProxyBean.getProxyBean(helloService, new MyInterceptor());
         proxy.sayHello("zhangsan");
         ArrayList<Object> list = new ArrayList<>(100000);
-        while (true) {
-            list.add(new Object());
-        }
 //        System.out.println("\n###############name is null!!#############\n");
 //        proxy.sayHello(null);
     }
