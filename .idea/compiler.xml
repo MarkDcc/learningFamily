@@ -8,19 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="multithread" />
-        <module name="mybatis" />
-        <module name="flowable-learn" />
         <module name="javareview" />
         <module name="springboot" />
+        <module name="servlet" />
+        <module name="mybatis" />
+        <module name="flowable-learn" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="flowable-learn" target="11" />
-      <module name="javareview" target="11" />
-      <module name="multithread" target="11" />
-      <module name="mybatis" target="11" />
-      <module name="springboot" target="11" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

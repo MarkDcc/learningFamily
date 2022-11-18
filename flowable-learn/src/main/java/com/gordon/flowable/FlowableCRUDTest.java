@@ -56,7 +56,7 @@ public class FlowableCRUDTest {
 		ProcessEngine processEngine = configuration.buildProcessEngine();
 		RepositoryService repositoryService = processEngine.getRepositoryService();
 		Deployment deploy =
-				repositoryService.createDeployment().addClasspathResource("holiday-request.bpmn20.xml").deploy();
+				repositoryService.createDeployment().addClasspathResource("test.bpmn20.xml").deploy();
 		ProcessDefinition processDefinition =
 				repositoryService.createProcessDefinitionQuery().deploymentId(deploy.getId()).singleResult();
 		System.out.println("processDefinition.getDeploymentId() = " + processDefinition.getDeploymentId());
@@ -76,7 +76,7 @@ public class FlowableCRUDTest {
 		variables.put("employee", "zhangsan");
 		variables.put("nrOfHolidays", "3");
 		variables.put("description", "想休息一下");
-		ProcessInstance processInstance = runtimeService.startProcessInstanceByKey("holidayRequest", variables);
+		ProcessInstance processInstance = runtimeService.startProcessInstanceByKey("test", variables);
 		System.out.println("processInstance.getBusinessKey() = " + processInstance.getBusinessKey());
 		System.out.println("processInstance.getProcessDefinitionKey() = " + processInstance.getProcessDefinitionKey());
 		for (Map.Entry<String, Object> entry : processInstance.getProcessVariables().entrySet()) {
@@ -88,13 +88,17 @@ public class FlowableCRUDTest {
 	public void testExecuteTask(){
 		ProcessEngine processEngine = configuration.buildProcessEngine();
 		TaskService taskService = processEngine.getTaskService();
-		List<Task> tasks = taskService.createTaskQuery().processDefinitionKey("holidayRequest").taskAssignee(
-				"lisi").list();
+		List<Task> tasks = taskService.createTaskQuery().processDefinitionKey("test").taskAssignee(
+				"boss").list();
 		for (Task task : tasks) {
 			System.out.println("task.getAssignee() = " + task.getAssignee());
-			if(task.getAssignee().equalsIgnoreCase("lisi")){
+			if(task.getAssignee().equalsIgnoreCase("boss")){
+				if(task.getId().equals("12503")){
+					taskService.complete(task.getId());
+					continue;
+				}
 				Map<String, Object> variables = new HashMap<>();
-				variables.put("approved",false);
+				variables.put("approve",true);
 				taskService.complete(task.getId(),variables);
 			}
 		}

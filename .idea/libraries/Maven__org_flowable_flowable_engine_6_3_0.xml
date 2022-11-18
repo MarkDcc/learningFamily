@@ -1,13 +1,15 @@
 <component name="libraryTable">
   <library name="Maven: org.flowable:flowable-engine:6.3.0">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.m2/springTraining/org/flowable/flowable-engine/6.3.0/flowable-engine-6.3.0.jar!/" />
+      <root url="jar://$USER_HOME$/.m2/selfrepository/org/flowable/flowable-engine/6.3.0/flowable-engine-6.3.0.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.m2/springTraining/org/flowable/flowable-engine/6.3.0/flowable-engine-6.3.0-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/.m2/selfrepository/org/flowable/flowable-engine/6.3.0/flowable-engine-6.3.0-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/.m2/springTraining/org/flowable/flowable-engine/6.3.0/flowable-engine-6.3.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.m2/selfrepository/org/flowable/flowable-engine/6.3.0/flowable-engine-6.3.0-sources.jar!/" />
+      <root url="file://$USER_HOME$/.m2/selfrepository/org/flowable/flowable-engine/6.3.0" />
+      <root url="file://$USER_HOME$/.m2/selfrepository/org/flowable/flowable-engine/6.3.0" />
     </SOURCES>
   </library>
 </component>

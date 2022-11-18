@@ -1,0 +1,9 @@
+
+Y
+java:S1226">Introduce a new variable instead of reusing the parameter "j".(¹Ò—›ýÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(¬Û¸Üÿÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ðö¶žüÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(´‹¹öþÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ã”…ªûÿÿÿÿ
+a
+java:S1128"FRemove this unused import 'javax.print.attribute.standard.JobKOctets'.(ÇûÔ’ûÿÿÿÿ
