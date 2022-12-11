@@ -85,4 +85,21 @@ public class MybatisTest {
         sqlSession2.close();
 
     }
+
+    @Test
+    public void test1(){
+
+        System.out.println("v() = " + v());
+    }
+
+    public String v(){
+        try {
+            int i = 1/0;
+        }catch (Exception e){
+            //return "exception";
+            System.out.println(e.getMessage());
+            System.out.println("exception");
+        }
+       return "runnig";
+    }
 }

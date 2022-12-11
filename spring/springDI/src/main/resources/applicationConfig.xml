@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+        使用bean标签来进行对象的创建。默认使用的是对象的无参构造方法。
+        id 用来标识bean对象的名称，class用来定位需要DI的对象。这里只能是类不能是接口
+        因为接口无法实例化。
+        property 用来完成对象属性的注入
+            value注入八大基本类型+string
+            ref注入引用类型
+     -->
+<!--    <bean id="address" class="com.gordon.pojo.Address">-->
+<!--        <property name="roadPath" value="shanghai pudong"></property>-->
+<!--        <property name="roomNum" value="129"></property>-->
+<!--    </bean>-->
+<!--    <bean id="user" class="com.gordon.pojo.User">-->
+<!--        <property name="name" value="zhangsan"></property>-->
+<!--        <property name="age" value="12"></property>-->
+<!--        <property name="address" ref="address"></property>-->
+<!--    </bean>-->
+
+        <bean id="user" class="com.gordon.pojo.User" autowire="byName">
+            <property name="name" value="zhangsan"></property>
+            <property name="age" value="12"></property>
+<!--            <property name="address" ref="address"></property>-->
+        </bean>
+    <bean id="address" class="com.gordon.pojo.Address">
+        <property name="roadPath" value="shanghai pudong"></property>
+        <property name="roomNum" value="129"></property>
+    </bean>
+
+<!--    <bean id="user" class="com.gordon.pojo.User">-->
+<!--        &lt;!&ndash;-->
+<!--            构造器注入使用constructor-arg标签。-->
+<!--            name属性可以指定构造方法中的参数名-->
+<!--            value用来指定基本类型+string类型-->
+<!--            ref用来指定引用类型-->
+<!--            index需要指定构造方法中的参数索引-->
+
+<!--            如果index和name都不指定。则默认按照构造方法的参数顺序进行注入。-->
+<!--        &ndash;&gt;-->
+<!--        <constructor-arg name="name" value="zhangsan"></constructor-arg>-->
+<!--        <constructor-arg index="1" value="13"></constructor-arg>-->
+<!--        <constructor-arg ref="address"></constructor-arg>-->
+<!--    </bean>-->
+
+</beans>

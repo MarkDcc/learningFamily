@@ -7,6 +7,11 @@
     <typeAliases>
         <package name="com.gordon.mybatis.pojo"/>
     </typeAliases>
+    <typeHandlers>
+        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler"
+                     javaType="com.gordon.mybatis.type.Enabled"
+        />
+    </typeHandlers>
     <!--配置数据库连接信息-->
     <environments default="development">
         <environment id="development">
@@ -23,4 +28,5 @@
         <package name="com.gordon.mybatis.mapper"/>
 <!--        <mapper resource="mappers/UserMapper.xml"/>-->
     </mappers>
+
 </configuration>

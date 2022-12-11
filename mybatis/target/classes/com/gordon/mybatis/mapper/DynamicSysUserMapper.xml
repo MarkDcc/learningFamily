@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gordon.mybatis.mapper.DynamicSysUserMapper">
+
+    <resultMap id="sysUser" type="com.gordon.mybatis.pojo.SysUser">
+        <id property="id" column="id"/>
+        <result property="userName" column="user_name"/>
+        <result property="userPassword" column="user_password"/>
+        <result property="userEmail" column="user_email"/>
+        <result property="userInfo" column="user_info"/>
+        <result property="headImg" column="head_img"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+    <insert id="insertUser">
+        insert into sys_user(user_name, user_password, create_time)
+        values (#{user.userName},
+                #{user.userPassword},
+                #{
+                    user.createTime
+                })
+    </insert>
+
+    <insert id="insertUserWithCondition">
+        insert into sys_user
+        (
+        <if test="user.userName !=null and user.userName!=''">
+            user_name,
+        </if>
+        user_password)
+        values (
+        <if test="user.userName !=null and user.userName!=''">
+            #{user.userName},
+        </if>
+        #{user.userPassword}
+        )
+
+    </insert>
+    <insert id="addUsers">
+        insert into sys_user(user_name,user_password,create_time)
+        values
+        <foreach collection="users" item="user" separator=",">
+          (#{user.userName},#{user.userPassword},#{user.createTime})
+        </foreach>
+
+    </insert>
+    <select id="getAllUser" resultMap="sysUser">
+        select * from sys_user
+        <where>
+            <if test="user_password != null and user_password != ''">
+                user_password != null
+            </if>
+        </where>
+    </select>
+    <select id="getUser1" resultMap="sysUser">
+        select * from sys_user
+        <where>
+            <if test="user.userName != null and user.userName!=''">
+                and user_name = #{user.userName}
+            </if>
+            <if test="user.userPassword != null and user.userPassword != ''">
+                and user_password =#{user.userPassword}
+            </if>
+
+        </where>
+
+    </select>
+    <select id="getUser2" resultType="com.gordon.mybatis.pojo.SysUser">
+        select * from sys_user
+        <trim prefix="where" prefixOverrides="and |or ">
+            <if test="user.userName != null and user.userName!=''">
+                and user_name = #{user.userName}
+            </if>
+            <if test="user.userPassword != null and user.userPassword != ''">
+                and user_password =#{user.userPassword}
+            </if>
+        </trim>
+        ;
+    </select>
+    <select id="getUser3" resultMap="sysUser">
+        SELECT * from sys_user WHERE id in
+        <foreach collection="ids" index="i" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+        ;
+    </select>
+
+
+</mapper>

@@ -1,18 +1,23 @@
 package com.gordon.flowable;
+import org.flowable.common.engine.impl.interceptor.CommandContext;
 import org.flowable.engine.*;
 import org.flowable.engine.history.HistoricActivityInstance;
+import org.flowable.engine.history.HistoricProcessInstance;
 import org.flowable.engine.impl.cfg.StandaloneProcessEngineConfiguration;
+import org.flowable.engine.impl.cmd.AbstractCustomSqlExecution;
+import org.flowable.engine.impl.persistence.entity.HistoricProcessInstanceEntityImpl;
 import org.flowable.engine.repository.Deployment;
 import org.flowable.engine.repository.ProcessDefinition;
 import org.flowable.engine.runtime.ProcessInstance;
 import org.flowable.task.api.Task;
+import org.flowable.variable.service.impl.persistence.entity.HistoricVariableInstanceEntityImpl;
+import org.flowable.variable.service.impl.persistence.entity.HistoricVariableInstanceEntityManager;
+import org.flowable.variable.service.impl.persistence.entity.HistoricVariableInstanceEntityManagerImpl;
+import org.flowable.engine.impl.util.CommandContextUtil;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author dongchen
@@ -55,8 +60,11 @@ public class FlowableCRUDTest {
 	public void testDeployBPMN(){
 		ProcessEngine processEngine = configuration.buildProcessEngine();
 		RepositoryService repositoryService = processEngine.getRepositoryService();
+//		Deployment deploy =
+//				repositoryService.createDeployment().addClasspathResource("test.bpmn20.xml").deploy();
 		Deployment deploy =
-				repositoryService.createDeployment().addClasspathResource("test.bpmn20.xml").deploy();
+				repositoryService.createDeployment().addClasspathResource("holiday-request.bpmn20.xml").deploy();
+
 		ProcessDefinition processDefinition =
 				repositoryService.createProcessDefinitionQuery().deploymentId(deploy.getId()).singleResult();
 		System.out.println("processDefinition.getDeploymentId() = " + processDefinition.getDeploymentId());
@@ -76,7 +84,8 @@ public class FlowableCRUDTest {
 		variables.put("employee", "zhangsan");
 		variables.put("nrOfHolidays", "3");
 		variables.put("description", "想休息一下");
-		ProcessInstance processInstance = runtimeService.startProcessInstanceByKey("test", variables);
+		variables.put("approved", true);
+		ProcessInstance processInstance = runtimeService.startProcessInstanceByKey("holidayRequest", variables);
 		System.out.println("processInstance.getBusinessKey() = " + processInstance.getBusinessKey());
 		System.out.println("processInstance.getProcessDefinitionKey() = " + processInstance.getProcessDefinitionKey());
 		for (Map.Entry<String, Object> entry : processInstance.getProcessVariables().entrySet()) {
@@ -88,28 +97,41 @@ public class FlowableCRUDTest {
 	public void testExecuteTask(){
 		ProcessEngine processEngine = configuration.buildProcessEngine();
 		TaskService taskService = processEngine.getTaskService();
-		List<Task> tasks = taskService.createTaskQuery().processDefinitionKey("test").taskAssignee(
-				"boss").list();
+		List<Task> tasks = taskService.createTaskQuery().processDefinitionKey("holidayRequest").list();
 		for (Task task : tasks) {
 			System.out.println("task.getAssignee() = " + task.getAssignee());
-			if(task.getAssignee().equalsIgnoreCase("boss")){
-				if(task.getId().equals("12503")){
+//			if(task.getAssignee().equalsIgnoreCase("lisi")){
+//				if(task.getId().equals("2510")){
 					taskService.complete(task.getId());
-					continue;
-				}
-				Map<String, Object> variables = new HashMap<>();
-				variables.put("approve",true);
-				taskService.complete(task.getId(),variables);
-			}
+
+//					continue;
+//				}
+//				Map<String, Object> variables = new HashMap<>();
+//				variables.put("approved",true);
+//				taskService.complete(task.getId(),variables);
+//			}
+//			taskService.complete(task.getId());
 		}
 	}
 
 	@Test
 	public void testGetHistory(){
 		ProcessEngine processEngine = configuration.buildProcessEngine();
+		//processEngine.getRuntimeService().suspendProcessInstanceById("1");
+		//processEngine.getRuntimeService().suspendProcessInstanceById("2501");
 		HistoryService historyService = processEngine.getHistoryService();
+//		Calendar cal = new GregorianCalendar();
+//		cal.set(Calendar.AM_PM, cal.get(Calendar.AM_PM) - 1);
+//		historyService.createHistoricProcessInstanceQuery()
+//				.finishedBefore(cal.getTime())
+//				.deleteWithRelatedData();
+		//historyService.deleteHistoricProcessInstance("50001");
+		List<HistoricProcessInstance> list1 = historyService.createHistoricProcessInstanceQuery().list();
+		for (HistoricProcessInstance historicProcessInstance : list1) {
+			((HistoricProcessInstanceEntityImpl) historicProcessInstance).markEnded("delete",new Date())
+		;}
 		List<HistoricActivityInstance> list =
-				historyService.createHistoricActivityInstanceQuery().processDefinitionId("holidayRequest:5:17503").finished()
+				historyService.createHistoricActivityInstanceQuery().processInstanceId("2501").finished()
 						.orderByHistoricActivityInstanceEndTime()
 						.asc()
 						.list();
@@ -119,6 +141,20 @@ public class FlowableCRUDTest {
 			System.out.println("historicActivityInstance.getActivityId() = " + historicActivityInstance.getActivityId());
 			System.out.println("historicActivityInstance.getDurationInMillis() = " + historicActivityInstance.getDurationInMillis());
 		}
+
+		//historyService.createHistoricProcessInstanceQuery().finished().list();
+		//historyService.deleteRelatedDataOfRemovedHistoricProcessInstances();
+
+		historyService.deleteHistoricProcessInstance("2501");
+
+
+	}
+
+	@Test
+	public void test11(){
+		ProcessEngine processEngine = configuration.buildProcessEngine();
+		ManagementService managementService = processEngine.getManagementService();
+		managementService.executeCommand(new SetHistoryVariablesCmd());
 	}
 
 

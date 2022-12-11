@@ -1,0 +1,19 @@
+
+>
+java:S1116"Remove this empty statement.(Åñ­õşÿÿÿÿ8¸òÈË0
+U	java:S106!"9Replace this use of System.out or System.err by a logger.(¯ìã8¹òÈË0
+Z	java:S106""9Replace this use of System.out or System.err by a logger.(û¼Šùÿÿÿÿÿ8¹òÈË0
+R
+java:S11722"0Remove this unused method parameter "joinPoint".(¤„¡úÿÿÿÿ8»òÈË0
+Z	java:S1063"9Replace this use of System.out or System.err by a logger.(œÉ–ßúÿÿÿÿ8»òÈË0
+U	java:S1065"9Replace this use of System.out or System.err by a logger.(Ÿ¥‰Å8¼òÈË0
+Z	java:S1069"9Replace this use of System.out or System.err by a logger.(şï‹øÿÿÿÿ8¼òÈË0
+U	java:S106P"9Replace this use of System.out or System.err by a logger.(×Ò€š8½òÈË0
+U	java:S106T"9Replace this use of System.out or System.err by a logger.(¼…š½8½òÈË0
+Z
+java:S1172c"8Remove these unused method parameters "joinPoint", "ex".(ÉôĞıøÿÿÿÿ8¿òÈË0
+U	java:S106d"9Replace this use of System.out or System.err by a logger.(àªä¿8ÀòÈË0
+]	java:S125e"<This block of commented-out lines of code should be removed.(¨®ëßÿÿÿÿÿ8ÀòÈË0
+U	java:S106p"9Replace this use of System.out or System.err by a logger.(ßë™…8ÀòÈË0
+i
+java:S1128"GRemove this unused import 'org.aspectj.apache.bcel.generic.ObjectType'.(ÛÎÂçşÿÿÿÿ8ÀòÈË0

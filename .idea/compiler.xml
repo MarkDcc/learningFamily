@@ -7,17 +7,31 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="demo01" />
         <module name="multithread" />
-        <module name="javareview" />
-        <module name="springboot" />
         <module name="servlet" />
         <module name="mybatis" />
+        <module name="springAop" />
+        <module name="springboot" />
+        <module name="springmvcssm" />
+        <module name="springmvc002" />
+        <module name="springTx" />
+        <module name="springmvc001" />
+        <module name="javareview" />
+        <module name="springDI" />
+        <module name="demospringmvc" />
+        <module name="springAopAspectJ" />
+        <module name="servlet01" />
         <module name="flowable-learn" />
+        <module name="springAnnotationDI" />
+        <module name="servlet02" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo01" options="-parameters" />
+      <module name="demospringmvc" options="-parameters" />
       <module name="springboot" options="-parameters" />
     </option>
   </component>

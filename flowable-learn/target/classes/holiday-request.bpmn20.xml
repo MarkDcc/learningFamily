@@ -45,7 +45,9 @@
                      flowable:class="org.flowable.SendRejectionMail"/>
         <sequenceFlow sourceRef="sendRejectionMail" targetRef="rejectEnd"/>
 
-        <endEvent id="approveEnd"/>
+        <endEvent id="approveEnd">
+            <terminateEventDefinition ></terminateEventDefinition>
+        </endEvent>
 
         <endEvent id="rejectEnd"/>
     </process>
