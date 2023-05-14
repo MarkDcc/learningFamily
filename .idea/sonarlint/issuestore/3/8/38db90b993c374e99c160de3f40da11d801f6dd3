@@ -1,0 +1,32 @@
+
+`	java:S1129"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112;"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112v"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112x"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112z"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+E
+java:S3740"/Provide the parametrized type for this generic.(íÎÊ
+J
+java:S3740""/Provide the parametrized type for this generic.(¶ş™Çşÿÿÿÿ
+K
+java:S3740"/Provide the parametrized type for this generic.(ç’îÿÿÿÿÿ
+E
+java:S1066*"/Merge this if statement with the enclosing one.(­ÛÒÄ
+‚
+java:S4165$"lRemove this useless assignment; "useConstructor" already holds the assigned value along all execution paths.(Ã¢è
+Z
+java:S2147:"DCombine this catch with the one at line 56, which has the same body.(åşáÿ
+M
+java:S1135'"2Complete the task associated to this TODO comment.(ò´Èëûÿÿÿÿ
+M
+java:S1135)"2Complete the task associated to this TODO comment.(ºãüºÿÿÿÿÿ
+E
+java:S1172p"/Remove this unused method parameter "beanName".(‘éİş
+[
+java:S2147w"ECombine this catch with the one at line 117, which has the same body.(åşáÿ
+`
+java:S2147y"ECombine this catch with the one at line 117, which has the same body.(¼¯•¶ùÿÿÿÿ
+F
+java:S1172Œ"/Remove this unused method parameter "beanName".(ÅŸÏ…
+W	java:S125 "<This block of commented-out lines of code should be removed.(ÜÓöıÿÿÿÿ
+R	java:S125©"<This block of commented-out lines of code should be removed.(£Ü²Ë

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <bean class="cn.bugstack.springframework.test.bean.ContextClosedEventListener"/>
+
+    <bean class="cn.bugstack.springframework.test.bean.ContextRefreshedListener"/>
+
+    <bean class="cn.bugstack.springframework.test.bean.CustomerEventListener"/>
+
+</beans>

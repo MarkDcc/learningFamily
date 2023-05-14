@@ -1,0 +1,6 @@
+
+g	java:S112B"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8„ƒÚ¢1
+u
+java:S1450"ZRemove the "beanFactory" field and declare it as a local variable in the relevant methods.(–Üéûùÿÿÿÿ
+J
+java:S1068"/Remove this unused "beanFactory" private field.(–Üéûùÿÿÿÿ

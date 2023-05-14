@@ -19,15 +19,12 @@ public class AccountServiceImpl implements AccountService{
 	@Autowired
 	AccountMapper accountMapper;
 
-	@Autowired
-	UserService userService;
-
-	@Transactional(propagation = Propagation.REQUIRED)
+	@Transactional(propagation = Propagation.NEVER)
 	@Override
 	public int addAccount(Account account) {
 		int result = accountMapper.addAccount(account);
-		userService.addUser(new User(200,"lisi",15));
-		//System.out.println(1/0);
+//		userService.addUser(new User(200,"lisi",15));
+		System.out.println(1/0);
 		return result;
 	}
 }

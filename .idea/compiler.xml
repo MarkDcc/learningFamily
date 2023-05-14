@@ -7,31 +7,49 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring-step07" />
+        <module name="spring-step06" />
+        <module name="spring-step05" />
         <module name="demo01" />
-        <module name="multithread" />
         <module name="servlet" />
+        <module name="spring-step09" />
         <module name="mybatis" />
         <module name="springAop" />
+        <module name="spring-step08" />
         <module name="springboot" />
-        <module name="springmvcssm" />
+        <module name="security01" />
         <module name="springmvc002" />
         <module name="springTx" />
         <module name="springmvc001" />
-        <module name="javareview" />
-        <module name="springDI" />
+        <module name="design" />
         <module name="demospringmvc" />
-        <module name="springAopAspectJ" />
         <module name="servlet01" />
+        <module name="servlet02" />
+        <module name="multithread" />
+        <module name="reflection" />
+        <module name="spring-step-12" />
+        <module name="spring-step-11" />
+        <module name="spring-step-10" />
+        <module name="springmvcssm" />
+        <module name="springDI" />
+        <module name="springAopAspectJ" />
         <module name="flowable-learn" />
         <module name="springAnnotationDI" />
-        <module name="servlet02" />
+        <module name="springsecurity01" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="java-reflection" target="1.8" />
+      <module name="spring-step06 (1)" target="1.8" />
+      <module name="springsecurity01" target="1.5" />
+      <module name="step04" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="demo01" options="-parameters" />
       <module name="demospringmvc" options="-parameters" />
+      <module name="security01" options="-parameters" />
       <module name="springboot" options="-parameters" />
     </option>
   </component>

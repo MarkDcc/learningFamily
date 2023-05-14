@@ -25,7 +25,18 @@
         <option value="$PROJECT_DIR$/springmvc/pom.xml" />
         <option value="$PROJECT_DIR$/springboot/demo01/pom.xml" />
         <option value="$PROJECT_DIR$/springboot/demospringmvc/pom.xml" />
+        <option value="$PROJECT_DIR$/design/pom.xml" />
+        <option value="$PROJECT_DIR$/spring/springOrgCode/pom.xml" />
+        <option value="$PROJECT_DIR$/javabase/pom.xml" />
+        <option value="$PROJECT_DIR$/springsecurity/pom.xml" />
+        <option value="$PROJECT_DIR$/springsecurity/security01/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/javareview/java-reflection/pom.xml" />
+        <option value="$PROJECT_DIR$/spring/springOrgCode/step04/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectResources">

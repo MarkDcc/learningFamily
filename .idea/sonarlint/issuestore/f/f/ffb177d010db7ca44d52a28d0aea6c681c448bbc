@@ -1,0 +1,59 @@
+
+`	java:S112)"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112+"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112-"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112?"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112A"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112C"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112["FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112f"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+J
+java:S37405"/Provide the parametrized type for this generic.(…ŞôÊûÿÿÿÿ
+E
+java:S3740G"/Provide the parametrized type for this generic.(ÿìÉŠ
+J
+java:S3740j"/Provide the parametrized type for this generic.(§Ğıˆûÿÿÿÿ
+w
+java:S1488&"\Immediately return this expression instead of assigning it to the temporary variable "test".(ì·¨€úÿÿÿÿ
+`
+java:S2259"EA "NullPointerException" could be thrown; "student" is nullable here.(Øğ¼·ûÿÿÿÿ
+
+java:S1130"wRemove the declaration of thrown exception 'java.lang.NoSuchFieldException', as it cannot be thrown from method's body.(øöÑä
+Q	java:S125"<This block of commented-out lines of code should be removed.(•‡à§
+Q	java:S125"<This block of commented-out lines of code should be removed.(ığªè
+h
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¤µ›
+Z
+java:S2147*"DCombine this catch with the one at line 40, which has the same body.(Å¡ß
+Z
+java:S2147,"DCombine this catch with the one at line 40, which has the same body.(åşáÿ
+Z
+java:S2147@"DCombine this catch with the one at line 62, which has the same body.(åşáÿ
+Z
+java:S2147B"DCombine this catch with the one at line 62, which has the same body.(Å¡ß
+N	java:S1069"9Replace this use of System.out or System.err by a logger.(Æ“Éë
+S	java:S106K"9Replace this use of System.out or System.err by a logger.(’˜îâøÿÿÿÿ
+S	java:S106M"9Replace this use of System.out or System.err by a logger.(ìûÇÿúÿÿÿÿ
+S	java:S106O"9Replace this use of System.out or System.err by a logger.(íËèÒşÿÿÿÿ
+V	java:S125N"<This block of commented-out lines of code should be removed.(á’“èùÿÿÿÿ
+N	java:S106R"9Replace this use of System.out or System.err by a logger.(â÷ºß
+Q	java:S125P"<This block of commented-out lines of code should be removed.(Ûå‹é
+S	java:S106T"9Replace this use of System.out or System.err by a logger.(º‹Ö¸şÿÿÿÿ
+N	java:S106U"9Replace this use of System.out or System.err by a logger.(§ğÆø
+N	java:S106Y"9Replace this use of System.out or System.err by a logger.(‰Ì¢Ó
+G
+java:S3011_",This accessibility update should be removed.(ò¯ù«ûÿÿÿÿ
+N	java:S106a"9Replace this use of System.out or System.err by a logger.(×ÃˆË
+B
+java:S3011b",This accessibility bypass should be removed.(½ÍÇú
+N	java:S106c"9Replace this use of System.out or System.err by a logger.(ŒÀ•š
+N	java:S106d"9Replace this use of System.out or System.err by a logger.(×ÃˆË
+S	java:S106k"9Replace this use of System.out or System.err by a logger.(¿Èè¿üÿÿÿÿ
+N	java:S106l"9Replace this use of System.out or System.err by a logger.(ñÜº“
+N	java:S106n"9Replace this use of System.out or System.err by a logger.(Óå¼Í
+N	java:S106p"9Replace this use of System.out or System.err by a logger.(ôö”ş
+N	java:S106q"9Replace this use of System.out or System.err by a logger.(ÕçäÊ
+S	java:S106r"9Replace this use of System.out or System.err by a logger.(›¼ÀÅÿÿÿÿÿ
+N	java:S106s"9Replace this use of System.out or System.err by a logger.(£—ø¾
+o
+java:S1128"TRemove this unused import 'jdk.internal.org.objectweb.asm.commons.StaticInitMerger'.(—Ú·ºúÿÿÿÿ

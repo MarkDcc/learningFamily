@@ -1,0 +1,9 @@
+
+`	java:S112("FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112*"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112,"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+p	java:S116"VRename this field "NULL_OBJECT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é¹Ë«þÿÿÿÿ
+Z
+java:S2147)"DCombine this catch with the one at line 39, which has the same body.(åþáÿ
+_
+java:S2147+"DCombine this catch with the one at line 39, which has the same body.(¼¯•¶ùÿÿÿÿ

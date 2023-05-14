@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <bean id="useDao" class="org.gordon.bean.UseDao"/>
+    <bean id="userService" class="org.gordon.bean.UserService">
+        <property name="uid" value="1001"/>
+<!--        <property name="company" value="腾讯"/>-->
+        <property name="location" value="深圳"/>
+        <!--        <property name="name" value="zhangsan"/>-->
+        <property name="useDao" ref="useDao"/>
+    </bean>
+    <bean id="myBeanFactoryPostProcesser" class="org.gordon.processer.MyBeanFactoryPostProcesser"/>
+    <bean id="myBeanPostProcessor" class="org.gordon.processer.MyBeanPostProcessor"/>
+</beans>

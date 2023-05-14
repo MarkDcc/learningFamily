@@ -14,6 +14,15 @@
         <module>springAop</module>
         <module>springAopAspectJ</module>
         <module>springTx</module>
+        <module>springOrgCode</module>
+        <module>spring-step05</module>
+        <module>spring-step06</module>
+        <module>spring-step07</module>
+        <module>spring-step08</module>
+        <module>spring-step09</module>
+        <module>spring-step-10</module>
+        <module>spring-step-11</module>
+        <module>spring-step-12</module>
     </modules>
     <dependencies>
         <dependency>

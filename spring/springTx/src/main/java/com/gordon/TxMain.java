@@ -15,11 +15,11 @@ public class TxMain {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationConfig.xml");
 		AccountService accountServiceImpl = (AccountService) context.getBean("accountServiceImpl");
 		UserService userService = (UserService) context.getBean("userServiceImpl");
-		Account account = new Account(100, "zhangsan", 101);
-		User user = new User(200, "lisi", 15);
-		int addAccount = accountServiceImpl.addAccount(account);
+		Account account = new Account(100, "lisi", 101);
+		User user = new User(200, "zhangsan", 15);
+		//int addAccount = accountServiceImpl.addAccount(account);
 		int addUser = userService.addUser(user);
-		System.out.println("addAccount = " + addAccount);
+		//System.out.println("addAccount = " + addAccount);
 		System.out.println("addUser = " + addUser);
 	}
 }

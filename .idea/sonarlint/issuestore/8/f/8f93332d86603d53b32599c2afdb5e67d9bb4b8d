@@ -1,0 +1,9 @@
+
+m	java:S135P"YReduce the total number of break and continue statements in this loop to use at most one.(â„Ñ
+s	java:S1358"YReduce the total number of break and continue statements in this loop to use at most one.(éýðöüÿÿÿÿ
+E
+java:S5411]"*Use the primitive boolean expression here.(Ðýú øÿÿÿÿ
+m
+java:S37764"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(‘ää§ùÿÿÿÿ
+H
+java:S1128"-Remove this unused import 'org.w3c.dom.Node'.(ùŠÿËýÿÿÿÿ

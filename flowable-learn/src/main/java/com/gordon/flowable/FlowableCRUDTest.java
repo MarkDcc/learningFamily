@@ -40,12 +40,12 @@ public class FlowableCRUDTest {
 
 	@Test
 	public void testCreateProcessEngine(){
-		ProcessEngineConfiguration configuration = new StandaloneProcessEngineConfiguration();
-		 configuration.setJdbcUrl("jdbc:mysql://localhost:3306/flowable-learn1?serverTimezone=UTC&nullCatalogMeansCurrent=true")
-				.setJdbcUsername("root")
-				.setJdbcPassword("Admin_1234")
-				.setJdbcDriver("com.mysql.cj.jdbc.Driver")
-				.setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_TRUE);
+//		ProcessEngineConfiguration configuration = new StandaloneProcessEngineConfiguration();
+//		 configuration.setJdbcUrl("jdbc:mysql://localhost:3306/flowable-learn1?serverTimezone=UTC&nullCatalogMeansCurrent=true")
+//				.setJdbcUsername("root")
+//				.setJdbcPassword("Admin_1234")
+//				.setJdbcDriver("com.mysql.cj.jdbc.Driver")
+//				.setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_TRUE);
 		ProcessEngine processEngine = configuration.buildProcessEngine();
 		System.out.println("processEngine = " + processEngine);
 		System.out.println(processEngine.getManagementService().getProperties().size());
@@ -79,12 +79,13 @@ public class FlowableCRUDTest {
 	@Test
 	public void testRunBPMN(){
 		ProcessEngine processEngine = configuration.buildProcessEngine();
+		ProcessEngines.getDefaultProcessEngine();
 		RuntimeService runtimeService = processEngine.getRuntimeService();
 		Map<String,Object> variables = new HashMap<>();
 		variables.put("employee", "zhangsan");
 		variables.put("nrOfHolidays", "3");
 		variables.put("description", "想休息一下");
-		variables.put("approved", true);
+		variables.put("approved", 1);
 		ProcessInstance processInstance = runtimeService.startProcessInstanceByKey("holidayRequest", variables);
 		System.out.println("processInstance.getBusinessKey() = " + processInstance.getBusinessKey());
 		System.out.println("processInstance.getProcessDefinitionKey() = " + processInstance.getProcessDefinitionKey());
@@ -100,12 +101,17 @@ public class FlowableCRUDTest {
 		List<Task> tasks = taskService.createTaskQuery().processDefinitionKey("holidayRequest").list();
 		for (Task task : tasks) {
 			System.out.println("task.getAssignee() = " + task.getAssignee());
-//			if(task.getAssignee().equalsIgnoreCase("lisi")){
+			if(task.getName().equalsIgnoreCase("Holiday approved")){
+				taskService.complete(task.getId());
+				continue;
+			}
+			if(task.getAssignee().equalsIgnoreCase("lisi")){
 //				if(task.getId().equals("2510")){
 					taskService.complete(task.getId());
 
 //					continue;
-//				}
+				}
+
 //				Map<String, Object> variables = new HashMap<>();
 //				variables.put("approved",true);
 //				taskService.complete(task.getId(),variables);

@@ -1,0 +1,23 @@
+
+`	java:S1121"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S1123"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+E
+java:S3740"/Provide the parametrized type for this generic.(íÎÊ
+J
+java:S3740"/Provide the parametrized type for this generic.(¶ş™Çşÿÿÿÿ
+J
+java:S3740K"/Provide the parametrized type for this generic.(ç’îÿÿÿÿÿ
+E
+java:S1066$"/Merge this if statement with the enclosing one.(­ÛÒÄ
+‚
+java:S4165"lRemove this useless assignment; "useConstructor" already holds the assigned value along all execution paths.(Ã¢è
+Z
+java:S21472"DCombine this catch with the one at line 48, which has the same body.(åşáÿ
+M
+java:S1135!"2Complete the task associated to this TODO comment.(ò´Èëûÿÿÿÿ
+M
+java:S1135#"2Complete the task associated to this TODO comment.(ºãüºÿÿÿÿÿ
+E
+java:S1172:"/Remove this unused method parameter "beanName".(ÅŸÏ…
+V	java:S125N"<This block of commented-out lines of code should be removed.(ÜÓöıÿÿÿÿ
+X	java:S125W"<This block of commented-out lines of code should be removed.(£Ü²Ë8š¿ÛÂñ0

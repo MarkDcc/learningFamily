@@ -1,0 +1,5 @@
+
+ˆ
+java:S1319"rThe type of "beanDefinitionHashMap" should be an interface such as "Map" rather than the implementation "HashMap".(­âœ
+w
+java:S1104"aMake beanDefinitionHashMap a static final constant or non-public and provide accessors if needed.(­âœ

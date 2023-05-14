@@ -1,0 +1,13 @@
+
+c
+java:S1192"HDefine a constant instead of duplicating this literal "number:" 3 times.(À–®¡ýÿÿÿÿ
+h
+java:S1104	"RMake number a static final constant or non-public and provide accessors if needed.(‡Ñ—¼
+M	java:S106"9Replace this use of System.out or System.err by a logger.(µŒé3
+N	java:S106"9Replace this use of System.out or System.err by a logger.(’¶¹‚
+S	java:S106"9Replace this use of System.out or System.err by a logger.(À–®¡ýÿÿÿÿ
+M	java:S106"9Replace this use of System.out or System.err by a logger.(–÷«?
+S	java:S106$"9Replace this use of System.out or System.err by a logger.(×œªÙúÿÿÿÿ
+Q	java:S125#"<This block of commented-out lines of code should be removed.(÷°Ëþ
+L
+java:S1144""1Remove this unused private "getClassRoom" method.(õ±øúúÿÿÿÿ
