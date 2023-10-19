@@ -27,9 +27,16 @@
         <module name="servlet02" />
         <module name="multithread" />
         <module name="reflection" />
+        <module name="spring-step-13" />
         <module name="spring-step-12" />
+        <module name="propertyresouce21" />
         <module name="spring-step-11" />
         <module name="spring-step-10" />
+        <module name="spring-step-17" />
+        <module name="rabbitMQ" />
+        <module name="spring-step-16" />
+        <module name="spring-step-15" />
+        <module name="spring-step-14" />
         <module name="springmvcssm" />
         <module name="springDI" />
         <module name="springAopAspectJ" />
@@ -49,6 +56,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="demo01" options="-parameters" />
       <module name="demospringmvc" options="-parameters" />
+      <module name="rabbitMQ" options="-parameters" />
       <module name="security01" options="-parameters" />
       <module name="springboot" options="-parameters" />
     </option>

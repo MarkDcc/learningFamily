@@ -1,0 +1,17 @@
+
+J
+java:S3740"/Provide the parametrized type for this generic.(â„Ö“ùÿÿÿÿ
+E
+java:S3740#"/Provide the parametrized type for this generic.(ˆÕÕ
+J
+java:S3740'"/Provide the parametrized type for this generic.(š—Ûûÿÿÿÿ
+J
+java:S3740:"/Provide the parametrized type for this generic.(©ãóàüÿÿÿÿ
+J
+java:S3740>"/Provide the parametrized type for this generic.(¢ÎÖÖþÿÿÿÿ
+n	java:S116"ZRename this field "SCOPE_SINGLETON" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï”Œ
+t	java:S116"ZRename this field "SCOPE_PROTOTYPE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰‹Ìöþÿÿÿÿ
+o
+java:S1450"TRemove the "scope" field and declare it as a local variable in the relevant methods.(îºÑÔýÿÿÿÿ
+D
+java:S1068")Remove this unused "scope" private field.(îºÑÔýÿÿÿÿ
